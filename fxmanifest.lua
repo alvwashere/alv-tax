@@ -1,6 +1,7 @@
-fx_version 'cerulean'
+fx_version 'adamant'
+game 'gta5'
 author 'alv'
 description 'tax sys - uses esx'
 
-server_script '*.lua'
-client_script '*.lua'
+server_script 'sv_tax.lua'
+client_script 'config.lua'
