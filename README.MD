@@ -17,5 +17,10 @@ Remember, this is a free script, so distribution is only allowed as long as it d
 
 # Future
 
-I will update this script as much as I can such as adding more capabilities for it and the ability for the amounts to differentiate based on xPlayer's job.
+I will update this script as much as I can, here are some ideas I want to do:
+
+- Include the possibility for tax to be based on a percentage of xPlayer's account as well as just a regular amount! [Finished on 21/05/2021]
+- Add the possibility for the tax to differentiate based on xPlayer's job if enabled in the Config.lua!
+- Allow Police to have a method of tracking tax evaders if they fail the tax check!
+
 For more information on the script, please visit https://discord.gg/9D7U5eF3ep
