@@ -2,7 +2,7 @@
 
 - Alv Development
 
-Remember, this is a free script, so distribution is only allowed as long as it doesn't come with a cost!
+Remember, this is a free script, so distribution is only allowed as long as it doesn't come with a cost! Just give me credit!
 
 - What is this?
 
