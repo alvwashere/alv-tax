@@ -7,22 +7,6 @@ TriggerEvent(
     end
 )
 
-AddEventHandler(
-    "playerSpawned",
-    function()
-        TriggerEvent("alv_tax:chargePlayer")
-    end
-)
-
-ESX = nil
-
-TriggerEvent(
-    "esx:getSharedObject",
-    function(obj)
-        ESX = obj
-    end
-)
-
 RegisterNetEvent("alv_tax:chargePlayer")
 AddEventHandler(
     "alv_tax:chargePlayer",
