@@ -17,6 +17,19 @@ AddEventHandler(
         if Config.Enabled then
             Wait(Config.TimeInterval)
 
+            if Config.UsePercentage then
+                local currentMoney = xPlayer.getAccount(Config.Account).money
+                local percent = 0.01 * Config.PercentageToCharge
+                local amountToRemove = currentMoney * percent
+
+                xPlayer.removeAccountMoney(Config.Account, amountToRemove)
+
+                ESX.ShowNotification(
+                    "Your taxes have been ~g~paid~s~, you have been charged" ..
+                        amountToRemove .. "from your" .. Config.Account .. "!"
+                )
+            end
+        else
             balance = xPlayer.getAccount("bank").money
             if balance > Config.TaxAmount then
                 xPlayer.removeAccountMoney(Config.Account, Config.TaxAmount)
