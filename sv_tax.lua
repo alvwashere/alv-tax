@@ -11,8 +11,9 @@ RegisterNetEvent("alv_tax:chargePlayer")
 AddEventHandler(
     "alv_tax:chargePlayer",
     function()
-        local xPlayer = ESX.GetPlayerFromId(source)
-        playerName = GetRealPlayerName(playerId)
+        local _source = source
+        local xPlayer = ESX.GetPlayerFromId(_source)
+        playerName = GetRealPlayerName(_source)
 
         if Config.Enabled then
             Wait(Config.TimeInterval)
