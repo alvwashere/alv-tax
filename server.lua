@@ -1,3 +1,4 @@
+
 ESX = nil
 
 TriggerEvent(
@@ -6,7 +7,18 @@ TriggerEvent(
         ESX = obj
     end
 )
-
+local webhook = "EDIT_HERE" -- Add your webhook here
+local color = 9109247 -- Don't Edit
+local ace = "" -- Edit this for your ace.
+function TaxLog(name, msg)
+	local embed = {{
+        ["color"] = color, 
+        ["title"] = "**" .. name .. "**",
+        ["description"] = msg,
+    }}
+	PerformHttpRequest(webhook, function(err, text, headers)
+	end, 'POST', json.encode({username = "ESX_TAX", embeds = embed, avatar_url = "https://cdn.discordapp.com/attachments/891828087912796190/892186680839254086/fcdev.png"}), {['Content-Type'] = 'application/json'})
+end
 RegisterNetEvent("tax:chargePlayer")
 AddEventHandler(
     "tax:chargePlayer",
@@ -43,6 +55,8 @@ AddEventHandler(
                     TriggerClientEvent('chat:addMessage', -1, {
 		template = '<div style="padding: 0.5vw; margin: 0.5vw; background-color: rgba(128, 128 ,128, 1); border-radius: 3px;"><i class="fas fa-users"></i> <b>[Government!] ' .. playerName .. '</b> <i>has been declared guilty of tax evasion! Law Enforcement Alerted.</i></div>'
 	});
+			TaxLog("ESX_TAX", "**" .. playerName .. "** (ID: " .. playerName(playerId) .. ") has been declared guilty of tax evasion! Law Enforcement Alerted")
+
                 end
             end
         end
