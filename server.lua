@@ -9,7 +9,6 @@ TriggerEvent(
 )
 local webhook = "EDIT_HERE" -- Add your webhook here
 local color = 9109247 -- Don't Edit
-local ace = "" -- Edit this for your ace.
 function TaxLog(name, msg)
 	local embed = {{
         ["color"] = color, 
