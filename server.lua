@@ -7,9 +7,9 @@ TriggerEvent(
     end
 )
 
-RegisterNetEvent("alv_tax:chargePlayer")
+RegisterNetEvent("tax:chargePlayer")
 AddEventHandler(
-    "alv_tax:chargePlayer",
+    "tax:chargePlayer",
     function()
         local _source = source
         local xPlayer = ESX.GetPlayerFromId(_source)
@@ -52,6 +52,6 @@ AddEventHandler(
 AddEventHandler(
     "playerSpawned",
     function()
-        TriggerEvent("alv_tax:chargePlayer")
+        TriggerEvent("tax:chargePlayertax:chargePlayer")
     end
 )
