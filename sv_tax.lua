@@ -40,13 +40,9 @@ AddEventHandler(
             else
                 if balance < Config.TaxAmount then
                     ESX.ShowNotification("You are now wanted for ~r~Tax Evasion~s~!")
-                    TriggerClientEvent(
-                        "chatMessage",
-                        -1,
-                        "Government",
-                        {255, 0, 0},
-                        "Player" .. playerName .. "has been declared guilty of tax evasion! Law Enforcement Alerted!"
-                    )
+                    TriggerClientEvent('chat:addMessage', -1, {
+		template = '<div style="padding: 0.5vw; margin: 0.5vw; background-color: rgba(128, 128 ,128, 1); border-radius: 3px;"><i class="fas fa-users"></i> <b>[Government!] ' .. playerName .. '</b> <i>has been declared guilty of tax evasion! Law Enforcement Alerted.</i></div>'
+	});
                 end
             end
         end
