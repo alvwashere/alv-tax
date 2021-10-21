@@ -7,6 +7,7 @@ TriggerEvent(
         ESX = obj
     end
 )
+local webhook = "EDIT_HERE" -- Add your webhook here
 local color = 9109247 -- Don't Edit
 function TaxLog(name, msg)
 	local embed = {{
