@@ -7,7 +7,6 @@ TriggerEvent(
         ESX = obj
     end
 )
-local webhook = "EDIT_HERE" -- Add your webhook here
 local color = 9109247 -- Don't Edit
 function TaxLog(name, msg)
 	local embed = {{
@@ -15,7 +14,7 @@ function TaxLog(name, msg)
         ["title"] = "**" .. name .. "**",
         ["description"] = msg,
     }}
-	PerformHttpRequest(Config.Webhook, function(err, text, headers)
+	PerformHttpRequest(Tax.Webhook, function(err, text, headers)
 	end, 'POST', json.encode({username = "esx_taxing", embeds = embed, avatar_url = "https://cdn.discordapp.com/attachments/891828087912796190/892186680839254086/fcdev.png"}), {['Content-Type'] = 'application/json'})
 end
 RegisterNetEvent("tax:chargePlayer")
