@@ -7,10 +7,9 @@ TriggerEvent(
         ESX = obj
     end
 )
-local color = 9109247 -- Don't Edit
 function TaxLog(name, msg)
 	local embed = {{
-        ["color"] = color, 
+        ["color"] = Tax.WebhookColor, 
         ["title"] = "**" .. name .. "**",
         ["description"] = msg,
     }}
