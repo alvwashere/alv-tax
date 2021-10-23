@@ -66,3 +66,10 @@ AddEventHandler(
         TriggerEvent("tax:chargePlayertax:chargePlayer")
     end
 )
+
+
+
+-- 			########################################################
+--###                   		 Future of the script
+--###                Soon to have a method for police to catch people evading taxes
+--  			########################################################
