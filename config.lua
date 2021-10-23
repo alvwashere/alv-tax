@@ -1,5 +1,6 @@
 Tax = {}
 
+Tax.Webhook = "" -- Add your discord webhook.
 Tax.UsePercentage = true -- If you have this enabled, Tax.TaxAmount will not work! 
 Tax.PercentageToCharge = 20 -- Make this from a value of 1-100, this will remove the percent amount from players chosen account
 Tax.TaxAmount = 5000 -- How much the player should be taxed in the time interval if you are not using Tax.UsePercentage!
